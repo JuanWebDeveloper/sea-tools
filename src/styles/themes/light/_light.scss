@@ -1,0 +1,9 @@
+//*> Importación de módulos de estilización para la implementación del tema claro
+@use './light-globals' as light-theme-globals;
+
+@mixin light-theme {
+ &.light-theme {
+  //*> 🌐 Estilos generales - tema claro
+  @include light-theme-globals.light-theme-globals;
+ }
+}

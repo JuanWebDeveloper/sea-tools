@@ -1,0 +1,21 @@
+@use './colors' as *;
+
+//*> Dark theme text shadow
+$dark-primary-text-shadow: 0.55px 0.55px 1.55px rgba($dark-primary-color, 0.65), 0.55px 0.55px 1.55px rgba($dark-primary-color, 0.65),
+ 0.55px 0.55px 1.55px rgba($dark-primary-color, 0.65);
+$dark-secondary-text-shadow: 0.55px 0.55px 1.55px rgba($dark-secondary-color, 0.65), 0.55px 0.55px 1.55px rgba($dark-secondary-color, 0.65),
+ 0.55px 0.55px 1.55px rgba($dark-secondary-color, 0.65);
+$dark-primary-text-shadow-light: 0.025px 0.025px 0.025px rgba($dark-primary-color, 0.2), 0.025px 0.025px 0.025px rgba($dark-primary-color, 0.2),
+ 0.025px 0.025px 0.025px rgba($dark-primary-color, 0.65);
+$dark-secondary-text-shadow-light: 0.1px 0.1px 0.025px rgba($dark-secondary-color, 0.65), 0.1px 0.1px 0.025px rgba($dark-secondary-color, 0.65),
+ 0.1px 0.1px 0.025px rgba($dark-secondary-color, 0.65);
+
+//*> light theme text shadow
+$light-primary-text-shadow: 0.55px 0.55px 1.55px rgba($light-primary-color, 0.65), 0.55px 0.55px 1.55px rgba($light-primary-color, 0.65),
+ 0.55px 0.55px 1.55px rgba($light-primary-color, 0.65);
+$light-secondary-text-shadow: 0.55px 0.55px 1.55px rgba($light-secondary-color, 0.65), 0.55px 0.55px 1.55px rgba($light-secondary-color, 0.65),
+ 0.55px 0.55px 1.55px rgba($light-secondary-color, 0.65);
+$light-primary-text-shadow-light: 0.55px 0.55px 0.35px rgba($light-primary-color, 0.65), 0.55px 0.55px 0.35px rgba($light-primary-color, 0.65),
+ 0.55px 0.55px 0.35px rgba($light-primary-color, 0.65);
+$light-secondary-text-shadow-light: 0.55px 0.55px 0.35px rgba($light-secondary-color, 0.65), 0.55px 0.55px 0.35px rgba($light-secondary-color, 0.65),
+ 0.55px 0.55px 0.35px rgba($light-secondary-color, 0.65);

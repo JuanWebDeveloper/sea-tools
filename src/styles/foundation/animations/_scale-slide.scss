@@ -1,0 +1,56 @@
+//*> Mixin y keyframes para animación de entrada escalada con deslizamiento desde la izquierda
+@mixin scale-slide-in-left {
+ animation: scale-slide-in-left 0.85s cubic-bezier(0.755, 0.665, 0.875, 1) both;
+}
+
+@keyframes scale-slide-in-left {
+ 0% {
+  left: -100%;
+  transform: scaleX(0) scaleY(0);
+ }
+ 25% {
+  left: -75%;
+  transform: scaleX(0.25) scaleY(0.25);
+ }
+ 50% {
+  left: -50%;
+  transform: scaleX(0.5) scaleY(0.5);
+ }
+ 75% {
+  left: -25%;
+  transform: scaleX(0.75) scaleY(0.75);
+ }
+ 100% {
+  left: 0%;
+  transform: scaleX(1) scaleY(1);
+ }
+}
+
+//*> Mixin y keyframes para animación de salida escalada con deslizamiento hacia la derecha
+@mixin scale-slide-out-right {
+ animation: scale-slide-out-right 0.85s cubic-bezier(0.755, 0.665, 0.875, 1) both;
+}
+
+@keyframes scale-slide-out-right {
+ 0% {
+  transform: scaleX(1) scaleY(1);
+  right: -25%;
+ }
+ 25% {
+  transform: scaleX(0.75) scaleY(0.75);
+  right: -55%;
+ }
+ 50% {
+  transform: scaleX(0.5) scaleY(0.5);
+  right: -75%;
+ }
+ 75% {
+  transform: scaleX(0.25) scaleY(0.25);
+  right: -100%;
+ }
+ 100% {
+  opacity: 0;
+  transform: scaleX(0) scaleY(0);
+  right: 0%;
+ }
+}

@@ -1,0 +1,33 @@
+@use '../../foundation/variables' as colors;
+@use '../../foundation/variables' as shadows;
+
+@mixin light-theme-globals {
+ background-color: colors.$light-primary-bg;
+
+ h1,
+ h2,
+ h3,
+ h4 {
+  color: colors.$light-primary-color;
+
+  span {
+   color: colors.$light-secondary-color;
+  }
+
+  &.shadow {
+   text-shadow: shadows.$light-primary-text-shadow;
+
+   span {
+    text-shadow: shadows.$light-secondary-text-shadow-light;
+   }
+  }
+ }
+
+ p {
+  color: colors.$light-tertiary-color;
+
+  span {
+   color: colors.$light-secondary-color;
+  }
+ }
+}

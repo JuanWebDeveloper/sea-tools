@@ -1,0 +1,45 @@
+@use '../../foundation/variables' as colors;
+
+@mixin dark-theme-globals {
+ background-color: colors.$dark-primary-bg;
+
+ h1,
+ h2,
+ h3,
+ h4 {
+  color: colors.$dark-primary-color;
+
+  span {
+   color: colors.$dark-secondary-color;
+  }
+ }
+
+ p {
+  color: colors.$dark-tertiary-color;
+
+  span {
+   color: colors.$dark-secondary-color;
+  }
+ }
+
+ button {
+  &.btn-primary {
+   color: colors.$dark-primary-color;
+   background-color: colors.$dark-primary-bg-button;
+
+   &:hover {
+    background-color: colors.$dark-primary-bg-button-hover;
+   }
+  }
+
+  &.btn-outline {
+   color: colors.$dark-primary-color;
+   border: 1px solid colors.$dark-primary-bg-button;
+
+   &:hover {
+    background-color: colors.$dark-primary-bg-button-hover;
+    border: 1px solid colors.$dark-primary-bg-button-hover;
+   }
+  }
+ }
+}

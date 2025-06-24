@@ -1,0 +1,56 @@
+@use '../../foundation/variables' as box;
+@use '../../foundation/variables' as functions;
+@use '../../foundation/variables' as transitions;
+
+@mixin btn-primary {
+ align-items: center;
+ border-radius: 8px;
+ border: 2.5px solid transparent;
+ cursor: pointer;
+ display: flex;
+ font-size: functions.toRem(0.9);
+ font-weight: 600;
+ padding: box.$box-quarter box.$box-onehalf;
+ transition: transitions.$transition-tertiary;
+ text-transform: capitalize;
+
+ & svg {
+  margin-left: box.$box-min;
+  transition: transitions.$transition-primary;
+ }
+
+ &:hover {
+  transform: scale(1.06);
+
+  svg {
+   transform: translateX(4px);
+  }
+ }
+}
+
+@mixin btn-outline {
+ align-items: center;
+ background-color: transparent;
+ border-radius: 8px;
+ border: 2.5px solid;
+ cursor: pointer;
+ display: flex;
+ font-size: functions.toRem(0.9);
+ font-weight: 600;
+ padding: box.$box-quarter box.$box-onehalf;
+ transition: transitions.$transition-tertiary;
+ text-transform: capitalize;
+
+ & svg {
+  margin-left: box.$box-min;
+  transition: transitions.$transition-primary;
+ }
+
+ &:hover {
+  transform: scale(1.06);
+
+  svg {
+   transform: scale(1.15) translateX(4px);
+  }
+ }
+}

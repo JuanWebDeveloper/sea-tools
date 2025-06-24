@@ -1,0 +1,11 @@
+//*> 📦 Fundamentos base (Varibales, Mixins)
+@use './foundation/variables';
+@use './foundation/mixing';
+@use './foundation/animations';
+
+//*> 🎨 Sistema de temas
+@use './themes/dark/dark-theme-imports';
+@use './themes/light/light-theme-imports';
+
+//*> 🌐 Estilos globales de la aplicación
+@use './globals';

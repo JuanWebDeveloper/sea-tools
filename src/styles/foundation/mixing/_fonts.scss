@@ -1,0 +1,56 @@
+@use '../../foundation/variables' as functions;
+@use '../../foundation/variables' as box;
+
+@mixin title {
+ font-size: functions.toRem(2.1);
+ font-weight: 700;
+ line-height: functions.toRem(2.5);
+ margin-bottom: box.$box-half;
+
+ @media (max-width: 1280px) {
+  font-size: functions.toRem(1.9);
+  line-height: functions.toRem(2.3);
+ }
+
+ @media (max-width: 1024px) {
+  font-size: functions.toRem(1.7);
+  line-height: functions.toRem(2.1);
+ }
+
+ @media (max-width: 600px) {
+  font-size: functions.toRem(1.5);
+  line-height: functions.toRem(1.9);
+ }
+}
+
+@mixin subtitle {
+ font-size: functions.toRem(1.7);
+ font-weight: 500;
+ line-height: functions.toRem(1.9);
+ margin: box.$box-half 0;
+
+ @media (max-width: 1280px) {
+  font-size: functions.toRem(1.5);
+  line-height: functions.toRem(1.7);
+ }
+
+ @media (max-width: 1024px) {
+  font-size: functions.toRem(1.3);
+  line-height: toRem(1.5);
+ }
+
+ @media (max-width: 600px) {
+  font-size: functions.toRem(1.2);
+  line-height: functions.toRem(1.6);
+ }
+}
+
+@mixin text {
+ font-size: functions.toRem(1.1);
+ font-weight: 400;
+ margin-bottom: box.$box-quarter;
+
+ span {
+  font-weight: 500;
+ }
+}

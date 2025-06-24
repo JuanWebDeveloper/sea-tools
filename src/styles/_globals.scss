@@ -1,0 +1,78 @@
+@use './foundation/mixing' as mixing;
+@use './foundation/variables' as box;
+@use './foundation/variables' as transitions;
+@use './themes/dark/dark-theme-imports.scss' as dark;
+@use './themes/light/light-theme-imports.scss' as light;
+
+* {
+ box-sizing: border-box;
+ border: none;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ text-decoration: none;
+}
+
+h1,
+h2 {
+ @include mixing.title;
+}
+
+h3,
+h4 {
+ @include mixing.subtitle;
+}
+
+p {
+ @include mixing.text;
+}
+
+button {
+ &.btn-primary {
+  @include mixing.btn-primary;
+ }
+
+ &.btn-outline {
+  @include mixing.btn-outline;
+ }
+}
+
+html,
+body {
+ overflow-x: hidden;
+}
+
+main {
+ left: 0;
+ min-height: 100vh;
+ position: absolute;
+ padding-top: box.$box-fifthe;
+ top: 0;
+ transition: transitions.$transition-theme;
+ width: 100vw;
+
+ @include dark.dark-theme;
+ @include light.light-theme;
+}
+
+/*
+* ESTILOS TEMPORALES DE VISUALIZACIÓN
+* Estos estilos son solo para probar la paleta de colores y la tipografía.
+* Se eliminarán cuando se desarrollen los componentes reales.
+*/
+.main-content {
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ justify-content: center;
+ padding: 4rem;
+ text-align: center;
+ margin: 0 auto;
+}
+
+.theme-switcher {
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 2rem;
+}
