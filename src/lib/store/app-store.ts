@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { uiSlice } from '@/lib/store';
 
 export const appStore = configureStore({
- reducer: {},
+ reducer: {
+  ui: uiSlice.reducer,
+ },
 });
 
 //*> Tipado para acceder al estado completo de la aplicación desde cualquier parte de la app
