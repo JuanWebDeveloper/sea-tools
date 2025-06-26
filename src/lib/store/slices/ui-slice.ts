@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import { getInitialTheme } from '../utils/get-initial-theme';
 
 interface UISliceModel {
  currentTheme: string;
@@ -8,7 +9,7 @@ interface UISliceModel {
 }
 
 const initialState: UISliceModel = {
- currentTheme: 'dark',
+ currentTheme: getInitialTheme(),
  loading: false,
  hasError: false,
  errorMessage: '',
@@ -18,7 +19,15 @@ const initialState: UISliceModel = {
 export const uiSlice = createSlice({
  name: 'ui',
  initialState,
- reducers: {},
+ reducers: {
+  //*> Acción para cambiar el tema actual de la aplicación
+  changeToTheme: (state, action: PayloadAction<string>) => {
+   state.currentTheme = action.payload;
+   if (typeof window !== 'undefined') {
+    localStorage.setItem('theme', action.payload);
+   }
+  },
+ },
 });
 
-export const {} = uiSlice.actions;
+export const { changeToTheme } = uiSlice.actions;
