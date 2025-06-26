@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './styles/main.scss';
+import { AppLayout } from '@/components';
 
 function App() {
  const [theme, setTheme] = useState('dark');
@@ -9,7 +9,7 @@ function App() {
  };
 
  return (
-  <main className={`main-content ${theme}-theme`}>
+  <AppLayout>
    <div className='theme-switcher'>
     <button className='btn-outline' onClick={() => handleThemeChange('dark')}>
      Tema Oscuro
@@ -25,7 +25,7 @@ function App() {
     Este es un párrafo de texto que describe alguna característica o sección de la página. Sirve para ver cómo contrasta el texto normal con el fondo
     y los títulos.
    </p>
-  </main>
+  </AppLayout>
  );
 }
 
