@@ -1,5 +1,7 @@
 //*> 🌐 Estilos generales - tema claro
 @forward './light';
 @forward './light-globals';
+//*> 🌐 Estilos de modales - tema claro
+@forward './components/modals/light-pel-calculator-modal';
 //*> 🌐 Estilos de componentes - tema claro
 @forward './components/home/light-hero-section';

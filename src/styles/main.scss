@@ -13,5 +13,7 @@
 //*> 🌐 Estilos globales de la aplicación
 @use './globals';
 
+//*> 🌐 Estilos de los modales de la aplicación
+@use './components/modals/pel-calculator-modal';
 //*> 🌐 Estilos de los componentes de la aplicación
 @use './components/home/hero-section';

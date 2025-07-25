@@ -1,11 +1,14 @@
 //*> Importación de módulos de estilización para la implementación del tema claro
 @use './light-globals' as light-theme-globals;
 @use './components/home/light-hero-section' as light-theme-hero-section;
+@use './components/modals/light-pel-calculator-modal' as light-theme-pel-calculator-modal;
 
 @mixin light-theme {
  &.light-theme {
   //*> 🌐 Estilos generales - tema claro
   @include light-theme-globals.light-theme-globals;
+  //*> 🌐 Estilos de modales - tema oscuro
+  @include light-theme-pel-calculator-modal.light-theme-pel-calculator-modal;
   //*> 🌐 Estilos de componentes - tema oscuro
   @include light-theme-hero-section.light-theme-hero-section;
  }

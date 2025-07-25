@@ -1,0 +1,86 @@
+@use '../../foundation/animations' as animations;
+
+.modal-backdrop {
+ @include animations.scale-slide-out-XY;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.5);
+ z-index: 999;
+
+ &.active {
+  @include animations.scale-slide-in-XY;
+ }
+
+ .modal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  padding: 2rem 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .modal-content {
+   animation: slideIn 0.3s ease-out;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   margin: 0 auto;
+   max-height: 95vh;
+   max-width: 600px;
+   overflow-y: auto;
+   position: relative;
+   width: 90%;
+
+   .modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+     margin: 0;
+    }
+
+    .close-modal {
+     background: none;
+     border: none;
+     cursor: pointer;
+     font-size: 3.5rem;
+     line-height: 1;
+     margin-left: 1rem;
+     padding: 0.5rem;
+     width: auto;
+     transition: color 0.3s ease;
+    }
+   }
+
+   .modal-body {
+    padding: 1.5rem;
+   }
+
+   .results {
+    @include animations.scale-slide-in-left;
+    margin-top: 2rem;
+
+    h3 {
+     margin-bottom: 1rem;
+    }
+
+    p {
+     font-size: 1.1rem;
+     margin-bottom: 0.5rem;
+
+     span {
+      font-weight: bold;
+     }
+    }
+   }
+  }
+ }
+}

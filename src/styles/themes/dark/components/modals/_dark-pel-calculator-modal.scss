@@ -1,0 +1,19 @@
+@use '../../../../foundation/variables' as colors;
+@use '../../../../foundation/variables' as shadows;
+
+@mixin dark-theme-pel-calculator-modal {
+ .modal-backdrop {
+  .modal {
+   .modal-content {
+    background-color: colors.$dark-secondary-bg;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    .modal-header {
+     .close-modal {
+      color: colors.$dark-primary-color;
+     }
+    }
+   }
+  }
+ }
+}

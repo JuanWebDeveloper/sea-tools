@@ -1,5 +1,7 @@
 //*> 🌐 Estilos generales - tema oscuro
 @forward './dark';
 @forward './dark-globals';
+//*> 🌐 Estilos de modales - tema oscuro
+@forward './components/modals/dark-pel-calculator-modal';
 //*> 🌐 Estilos de componentes - tema oscuro
 @forward './components/home/dark-hero-section';
