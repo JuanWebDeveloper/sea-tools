@@ -14,6 +14,22 @@
  text-decoration: none;
 }
 
+// Scrollbar para navegadores Chromium
+::-webkit-scrollbar {
+ width: 4px;
+ background: #353941;
+}
+
+::-webkit-scrollbar-thumb {
+ border-radius: 8px;
+ background: #6c7586;
+ transition: transitions.$transition-primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background: #444b58;
+}
+
 h1,
 h2 {
  @include mixing.title;
@@ -58,6 +74,36 @@ body {
  .theme-switcher {
   display: flex;
   gap: 1rem;
+ }
+
+ form {
+  padding-bottom: 0.5rem;
+
+  .form-group {
+   label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+   }
+
+   input {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    transition: transitions.$transition-primary;
+    width: 100%;
+
+    &:focus {
+     outline: none;
+    }
+   }
+  }
+
+  button {
+   cursor: pointer;
+   margin: 0 auto;
+   margin-top: box.$box-quarter;
+  }
  }
 
  @include dark.dark-theme;

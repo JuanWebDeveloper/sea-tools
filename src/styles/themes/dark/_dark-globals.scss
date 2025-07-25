@@ -1,4 +1,5 @@
 @use '../../foundation/variables' as colors;
+@use '../../foundation/variables' as shadows;
 
 @mixin dark-theme-globals {
  background-color: colors.$dark-primary-bg;
@@ -39,6 +40,36 @@
    &:hover {
     background-color: colors.$dark-primary-bg-button-hover;
     border: 1px solid colors.$dark-primary-bg-button-hover;
+   }
+  }
+ }
+
+ form {
+  background: radial-gradient(
+   circle,
+   colors.$dark-primary-bg 0%,
+   colors.$dark-quaternary-bg 40%,
+   colors.$dark-tertiary-bg 70%,
+   colors.$dark-secondary-bg 100%
+  );
+  box-shadow: shadows.$dark-primary-shadow;
+
+  .form-group {
+   padding: 1rem;
+   label {
+    color: colors.$dark-primary-color;
+   }
+
+   input {
+    background: linear-gradient(90deg, colors.$dark-secondary-bg 0%, colors.$dark-primary-bg 50%, colors.$dark-quaternary-bg 100%);
+    box-shadow: shadows.$dark-secondary-shadow;
+    border: 2px solid colors.$dark-secondary-bg;
+    color: colors.$dark-primary-color;
+
+    &:focus {
+     background-color: colors.$dark-quaternary-bg;
+     border-color: colors.$dark-primary-bg;
+    }
    }
   }
  }

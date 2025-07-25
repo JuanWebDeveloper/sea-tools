@@ -52,4 +52,34 @@
    }
   }
  }
+
+ form {
+  background: radial-gradient(
+   circle,
+   colors.$light-primary-bg 0%,
+   colors.$light-quaternary-bg 40%,
+   colors.$light-tertiary-bg 70%,
+   colors.$light-secondary-bg 100%
+  );
+  box-shadow: shadows.$light-primary-shadow;
+
+  .form-group {
+   padding: 1rem;
+   label {
+    color: colors.$light-primary-color;
+   }
+
+   input {
+    background: linear-gradient(90deg, colors.$light-secondary-bg 0%, colors.$light-primary-bg 50%, colors.$light-quaternary-bg 100%);
+    box-shadow: shadows.$light-secondary-shadow;
+    border: 2px solid colors.$light-secondary-bg;
+    color: colors.$light-primary-color;
+
+    &:focus {
+     background-color: colors.$light-quaternary-bg;
+     border-color: colors.$light-primary-bg;
+    }
+   }
+  }
+ }
 }
