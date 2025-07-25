@@ -46,7 +46,7 @@
 }
 
 @mixin text {
- font-size: functions.toRem(1.1);
+ font-size: functions.toRem(1);
  font-weight: 400;
  margin-bottom: box.$box-quarter;
 

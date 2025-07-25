@@ -43,37 +43,23 @@ body {
  overflow-x: hidden;
 }
 
-main {
- left: 0;
- min-height: 100vh;
- position: absolute;
- padding-top: box.$box-fifthe;
- top: 0;
- transition: transitions.$transition-theme;
- width: 100vw;
-
- @include dark.dark-theme;
- @include light.light-theme;
-}
-
-/*
-* ESTILOS TEMPORALES DE VISUALIZACIÓN
-* Estos estilos son solo para probar la paleta de colores y la tipografía.
-* Se eliminarán cuando se desarrollen los componentes reales.
-*/
 .main-content {
  align-items: center;
  display: flex;
  flex-direction: column;
  gap: 1.5rem;
  justify-content: center;
- padding: 4rem;
- text-align: center;
+ min-height: 100vh;
  margin: 0 auto;
-}
+ padding: box.$box-onehalf;
+ text-align: center;
+ transition: transitions.$transition-theme;
 
-.theme-switcher {
- display: flex;
- gap: 1rem;
- margin-bottom: 2rem;
+ .theme-switcher {
+  display: flex;
+  gap: 1rem;
+ }
+
+ @include dark.dark-theme;
+ @include light.light-theme;
 }
