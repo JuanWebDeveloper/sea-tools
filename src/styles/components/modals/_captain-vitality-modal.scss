@@ -1,0 +1,181 @@
+@use '../../foundation/variables' as colors;
+
+.captain-vitality-modal {
+ .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &.active {
+   display: flex;
+  }
+ }
+
+ .modal {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+   transform: scale(1);
+   opacity: 1;
+  }
+
+  .modal-content {
+   padding: 2rem;
+   border-radius: 0.75rem;
+   width: 100%;
+   max-width: 500px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+   .modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+     margin: 0;
+    }
+
+    .close-modal {
+     background: none;
+     border: none;
+     cursor: pointer;
+     font-size: 3.5rem;
+     line-height: 1;
+     margin-left: 1rem;
+     padding: 0.5rem;
+     width: auto;
+     transition: color 0.3s ease;
+    }
+   }
+   .tabs,
+   .levels {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    button {
+     padding: 0.5rem 1rem;
+     border-radius: 0.5rem;
+     cursor: pointer;
+     font-weight: bold;
+     transition: 0.2s ease;
+    }
+   }
+
+   .tabs {
+    & button.active.outcast {
+     background-color: #b0b0b0;
+     color: #0d161c;
+    }
+
+    & button.active.harmless {
+     background-color: #04d30487;
+     color: colors.$dark-primary-color;
+    }
+
+    & button.active.dangerous {
+     background-color: #2f75ff87;
+     color: colors.$dark-primary-color;
+    }
+
+    & button.active.elite {
+     background-color: #a020f087;
+     color: colors.$dark-primary-color;
+    }
+
+    & button.active.epic {
+     background-color: #ffa500;
+     color: #0d161c;
+    }
+
+    & button.active.random {
+     background-color: #55ccaa;
+     color: #0d161c;
+    }
+
+    & button.active.amalia {
+     background-color: #4b6df0;
+     color: colors.$dark-primary-color;
+    }
+   }
+
+   .levels {
+    & button.active.outcast {
+     background-color: #b0b0b0;
+     color: #0d161c;
+    }
+    & button.active.harmless {
+     background-color: #04d30487;
+     color: colors.$dark-primary-color;
+    }
+    & button.active.dangerous {
+     background-color: #2f75ff87;
+     color: colors.$dark-primary-color;
+    }
+    & button.active.elite {
+     background-color: #a020f087;
+     color: colors.$dark-primary-color;
+    }
+   }
+  }
+
+  .modal-header {
+   margin-bottom: 1.5rem;
+
+   h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+   }
+
+   p {
+    font-size: 0.9rem;
+   }
+  }
+
+  // Vitality list coloreada por tipo
+  .vitality-list {
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+
+    th,
+    td {
+     padding: 0.6rem 0.8rem;
+     text-align: center;
+     border-bottom: 2px solid colors.$dark-primary-bg;
+    }
+
+    th {
+     background-color: colors.$dark-quaternary-bg;
+     color: colors.$dark-primary-color;
+    }
+   }
+
+   &.outcast td {
+    background-color: #b0b0b0;
+   }
+
+   &.harmless td {
+    background-color: #04d30487;
+    color: colors.$dark-primary-color;
+   }
+
+   &.dangerous td {
+    background-color: #2f75ff87;
+    color: colors.$dark-primary-color;
+   }
+
+   &.elite td {
+    background-color: #a020f087;
+    color: colors.$dark-primary-color;
+   }
+  }
+ }
+}
