@@ -1,0 +1,18 @@
+@use 'sass:color';
+@use '../../../../foundation/variables' as colors;
+@use '../../../../foundation/variables' as shadows;
+
+@mixin dark-theme-hero-section {
+ .hero-section {
+  .tool-button {
+   background-color: colors.$dark-tertiary-bg;
+   border: 3px solid colors.$dark-secondary-bg;
+   box-shadow: shadows.$dark-primary-shadow;
+
+   &:hover {
+    background-color: colors.$dark-quaternary-bg;
+    box-shadow: shadows.$dark-secondary-shadow;
+   }
+  }
+ }
+}

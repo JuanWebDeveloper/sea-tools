@@ -1,0 +1,16 @@
+@use '../../../../foundation/variables' as colors;
+@use '../../../../foundation/variables' as shadows;
+
+@mixin light-theme-hero-section {
+ .hero-section {
+  .tool-button {
+   background-color: colors.$light-tertiary-bg;
+   box-shadow: shadows.$light-primary-shadow;
+
+   &:hover {
+    background-color: colors.$light-quaternary-bg;
+    box-shadow: shadows.$light-secondary-shadow;
+   }
+  }
+ }
+}

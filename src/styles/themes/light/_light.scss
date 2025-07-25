@@ -1,9 +1,12 @@
 //*> Importación de módulos de estilización para la implementación del tema claro
 @use './light-globals' as light-theme-globals;
+@use './components/home/light-hero-section' as light-theme-hero-section;
 
 @mixin light-theme {
  &.light-theme {
   //*> 🌐 Estilos generales - tema claro
   @include light-theme-globals.light-theme-globals;
+  //*> 🌐 Estilos de componentes - tema oscuro
+  @include light-theme-hero-section.light-theme-hero-section;
  }
 }

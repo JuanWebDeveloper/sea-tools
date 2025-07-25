@@ -30,4 +30,26 @@
    color: colors.$light-secondary-color;
   }
  }
+
+ button {
+  &.btn-primary {
+   color: colors.$light-quinary-color;
+   background-color: colors.$light-primary-bg-button;
+
+   &:hover {
+    background-color: colors.$light-primary-bg-button-hover;
+   }
+  }
+
+  &.btn-outline {
+   color: colors.$light-primary-color;
+   border: 1px solid colors.$light-primary-bg-button;
+
+   &:hover {
+    color: colors.$light-quinary-color;
+    background-color: colors.$light-primary-bg-button-hover;
+    border: 1px solid colors.$light-primary-bg-button-hover;
+   }
+  }
+ }
 }

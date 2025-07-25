@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use '../../foundation/variables' as box;
+
+.hero-section {
+ .welcome-banner {
+  margin: box.$box-onehalf 0;
+ }
+
+ .tools-grid {
+  display: grid;
+  gap: 1rem;
+ }
+
+ .tool-button {
+  background-color: #2a78ac;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: box.$box-quarter box.$box-half;
+  text-align: left;
+  transition: all 0.3s ease;
+
+  &:hover {
+   background-color: color.adjust(#2a78ac, $lightness: 5%);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   transform: translateY(-5px);
+  }
+
+  h3 {
+   color: #2a78ac;
+   margin-bottom: 0.5rem;
+  }
+ }
+}

@@ -1,9 +1,12 @@
 //*> Importación de módulos de estilización para la implementación del tema oscuro
 @use './dark-globals' as dark-theme-globals;
+@use './components/home/dark-hero-section' as dark-theme-hero-section;
 
 @mixin dark-theme {
  &.dark-theme {
   //*> 🌐 Estilos generales - tema oscuro
   @include dark-theme-globals.dark-theme-globals;
+  //*> 🌐 Estilos de componentes - tema oscuro
+  @include dark-theme-hero-section.dark-theme-hero-section;
  }
 }
