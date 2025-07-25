@@ -1,4 +1,4 @@
-export const HeroSection = () => {
+export const HeroSection = ({ onOpenModal }: { onOpenModal: () => void }) => {
  return (
   <section className='hero-section'>
    <div className='welcome-banner'>
@@ -11,7 +11,7 @@ export const HeroSection = () => {
     </p>
    </div>
    <div className='tools-grid'>
-    <button className='tool-button' data-modal='pel-calculator'>
+    <button className='tool-button' onClick={onOpenModal}>
      <h3>🧮🏅 Calculadora de PEL</h3>
      <p>Calcula puntos elite basados en disparos y tiempo</p>
     </button>
