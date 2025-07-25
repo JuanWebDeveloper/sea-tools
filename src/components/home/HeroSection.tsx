@@ -15,7 +15,7 @@ export const HeroSection = ({ onOpenModal }: { onOpenModal: (modal: string) => v
      <h3>🏅🧮 Calculadora de PEL</h3>
      <p>🧮 Calcula puntos elite basados en disparos y tiempo</p>
     </button>
-    <button className='tool-button' onClick={() => onOpenModal('')}>
+    <button className='tool-button' onClick={() => onOpenModal('captain-vitality')}>
      <h3>⚓❤️‍🔥 Vitalidad de Capitanes</h3>
      <p>❤️‍🔥 Observa la vitalidad potencial de tus capitanes según su nivel y rango.</p>
     </button>
